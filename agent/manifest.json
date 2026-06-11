@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "version": "1.0.0",
+  "id": "silent-escalation-copilot-001",
+  "developer": {
+    "name": "AntigamerISK",
+    "websiteUrl": "https://github.com/AntigamerISK/silent-escalation-copilot",
+    "privacyUrl": "https://github.com/AntigamerISK/silent-escalation-copilot/blob/main/LICENSE",
+    "termsOfUseUrl": "https://github.com/AntigamerISK/silent-escalation-copilot/blob/main/LICENSE"
+  },
+  "name": {
+    "short": "Silent Escalation Copilot",
+    "full": "Silent Escalation Copilot — Enterprise Risk Detection Agent"
+  },
+  "description": {
+    "short": "Detect hidden business risks and generate executive escalation drafts.",
+    "full": "Silent Escalation Copilot is a Microsoft 365 Copilot declarative agent that analyzes emails, Teams messages, documents, and tasks to identify unescalated business risks. It generates structured risk summaries and ready-to-send executive escalation drafts."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#C30000",
+  "copilotAgents": {
+    "declarativeAgents": [
+      {
+        "id": "SilentEscalationCopilot",
+        "file": "declarativeAgent.json"
+      }
+    ]
+  },
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": []
+}
