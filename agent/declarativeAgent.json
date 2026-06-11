@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.4/schema.json",
+  "version": "v1.4",
+  "name": "Silent Escalation Copilot",
+  "description": "Enterprise risk detection agent that identifies hidden business risks across Microsoft 365 and generates executive-ready escalation drafts.",
+  "instructions": "$[file('instructions.md')]",
+  "conversation_starters": [
+    {
+      "title": "Detect Hidden Risks",
+      "text": "Analyze the available business context and identify hidden risks that have not been escalated yet."
+    },
+    {
+      "title": "Escalation Check",
+      "text": "Is there anything in my current work context that should be escalated to leadership right now?"
+    },
+    {
+      "title": "Generate Escalation Summary",
+      "text": "Generate an executive escalation summary with risk level, evidence found, business impact, and recommended next action."
+    },
+    {
+      "title": "Draft Escalation",
+      "text": "Draft a Teams message and an email to escalate the most critical risk identified to the right owner."
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "WebSearch"
+    },
+    {
+      "name": "GraphConnectors"
+    }
+  ]
+}
