@@ -1,0 +1,135 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "style": "attention",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "auto",
+              "items": [
+                {
+                  "type": "Image",
+                  "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Warning/3D/warning_3d.png",
+                  "size": "Medium",
+                  "altText": "Warning Icon"
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "⚠️ Risk Alert",
+                  "weight": "Bolder",
+                  "size": "Large",
+                  "color": "Attention"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "Silent Escalation Copilot",
+                  "isSubtle": true,
+                  "size": "Small"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Risk Level:",
+              "value": "{{riskLevel}}"
+            },
+            {
+              "title": "Detected:",
+              "value": "{{detectedDate}}"
+            },
+            {
+              "title": "Source:",
+              "value": "{{source}}"
+            },
+            {
+              "title": "Impact:",
+              "value": "{{businessImpact}}"
+            }
+          ]
+        },
+        {
+          "type": "TextBlock",
+          "text": "**Risk Description:**",
+          "weight": "Bolder",
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "{{riskDescription}}",
+          "wrap": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "**Evidence:**",
+          "weight": "Bolder",
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "{{evidence}}",
+          "wrap": true,
+          "isSubtle": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "**Recommended Action:**",
+          "weight": "Bolder",
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "{{recommendedAction}}",
+          "wrap": true,
+          "color": "Good"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "View Details",
+      "url": "{{detailsUrl}}",
+      "style": "positive"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Escalate Now",
+      "data": {
+        "action": "escalate",
+        "riskId": "{{riskId}}"
+      },
+      "style": "destructive"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Acknowledge",
+      "data": {
+        "action": "acknowledge",
+        "riskId": "{{riskId}}"
+      }
+    }
+  ]
+}
