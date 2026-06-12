@@ -1,0 +1,49 @@
+{
+  "name": "silent-escalation-mcp-server",
+  "version": "2.0.0",
+  "description": "MCP Server for Silent Escalation Copilot - Jira & Azure DevOps risk detection",
+  "main": "jira-connector.ts",
+  "scripts": {
+    "start": "ts-node jira-connector.ts",
+    "dev": "nodemon --exec ts-node jira-connector.ts",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "mcp-server",
+    "microsoft-365",
+    "copilot",
+    "jira",
+    "azure-devops",
+    "risk-detection",
+    "project-management"
+  ],
+  "author": "Silent Escalation Copilot Team",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/mcp-sdk": "^1.0.0",
+    "@azure/msal-node": "^2.6.0",
+    "jira-connector": "^3.1.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
