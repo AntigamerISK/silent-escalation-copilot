@@ -7,6 +7,8 @@
 ![Track](https://img.shields.io/badge/track-Enterprise%20Agents-red)
 ![Platform](https://img.shields.io/badge/platform-Microsoft%20365%20Copilot-0078D4)
 ![Status](https://img.shields.io/badge/status-Live%20%E2%9C%85-brightgreen)
+![MCP Server](https://img.shields.io/badge/MCP_Server-Jira%20%2B%20OAuth-FF6B35)  
+![Version](https://img.shields.io/badge/version-2.0_Enterprise-blue)
 
 ---
 
@@ -38,6 +40,31 @@ It reads signals from emails, Teams chats, meeting notes, SharePoint documents, 
 | 🎯 Owner Suggestion | Recommends the right escalation owner based on context |
 
 ---
+
+## ⚡ v2.0 Enterprise Features
+
+### External Integration (MCP Server)
+- ✅ **Jira Connector** — Detects blocked tickets >48h, cross-references with Teams activity
+- ✅ **OAuth-Secured** — Azure AD authentication for enterprise compliance
+- ✅ **Cross-Platform Risk Detection** — Combines Jira + M365 signals in single analysis
+- 🟡 **Azure DevOps Integration** — Roadmap for PR/pipeline risk detection
+
+### Production-Ready Code
+- ✅ **TypeScript MCP Server** (234 lines) — `mcp-server/jira-connector.ts`
+- ✅ **Full Dependencies** — `package.json` with all npm packages
+- ✅ **Error Handling** — Health checks + graceful fallbacks
+- ✅ **Environment Config** — `.env.example` template included
+
+### Enterprise Roadmap
+See [`IMPROVEMENT_PLAN.md`](IMPROVEMENT_PLAN.md) for:
+- Power Automate approval workflows
+- Power BI real-time dashboards
+- Sentiment analysis + predictive ML
+- Voice interface for Teams meetings
+- ROI: 1,556% year 1 ($828k savings)
+
+**Status:** See [`IMPLEMENTATION_STATUS.md`](IMPLEMENTATION_STATUS.md) for complete deployment status.
+
 
 ## 🏗️ Architecture
 
